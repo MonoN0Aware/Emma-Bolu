@@ -15,6 +15,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
 
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if let todo = todoList {
