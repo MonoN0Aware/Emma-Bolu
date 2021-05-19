@@ -15,7 +15,7 @@ class AddController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    // MARK: When add button pressed, save what is in textview to the table
     @IBAction func addPressed(_ sender: UIButton) {
         if (textView.text != nil) && textView.text != "" {
             todoList?.append(textView.text!)
