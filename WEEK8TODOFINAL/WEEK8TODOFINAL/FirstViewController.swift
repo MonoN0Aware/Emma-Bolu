@@ -15,6 +15,11 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+    }
 
 func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if let todo = todoList {
@@ -42,9 +47,10 @@ func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.Ed
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     guard let viewc =
-            storyboard?.instantiateViewController( withIdentifier: "task") as? TaskViewController else { return }
-    viewc.title = "New Task"
-    viewc.task = todoList?[indexPath.row ]
-    navigationController?.pushViewController(viewc, animated: true)
-}
+                    storyboard?.instantiateViewController( withIdentifier: "task") as? TaskViewController else { return }
+            viewc.title = "New Task"
+            viewc.task = todoList?[indexPath.row]
+            viewc.solveProblem = indexPath.row
+            navigationController?.pushViewController(viewc, animated: true)
+        }
 }

@@ -8,9 +8,11 @@
 import UIKit
 
 class TaskViewController: UIViewController, UITextViewDelegate {
+
     var solveProblem: Int!
     var task: String?
     var todo = FirstViewController()
+
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,10 @@ class TaskViewController: UIViewController, UITextViewDelegate {
         todoList?.remove(at: solveProblem!)
         print(solveProblem!)
     }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
-        todoList?.insert(textView.text, at: solveProblem!)
-        saveData(todoList: todoList!)
-    }
+           todoList?.insert(textView.text, at: solveProblem!)
+           saveData(todoList: todoList!)
+       }
+
 }

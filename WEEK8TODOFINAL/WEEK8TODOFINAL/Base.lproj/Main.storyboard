@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="755.07246376811599" y="60.9375"/>
         </scene>
-        <!--View Controller-->
+        <!--Task View Controller-->
         <scene sceneID="vQq-fX-EK9">
             <objects>
-                <viewController id="1Or-pf-2bE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="task" id="1Or-pf-2bE" customClass="TaskViewController" customModule="WEEK8TODOFINAL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7OM-d8-qdE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6vL-pH-I4i"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
                             <constraint firstItem="6vL-pH-I4i" firstAttribute="bottom" secondItem="DNr-f5-UGj" secondAttribute="bottom" id="Erx-gu-NDS"/>
                             <constraint firstItem="6vL-pH-I4i" firstAttribute="trailing" secondItem="DNr-f5-UGj" secondAttribute="trailing" constant="20" id="Mjj-hZ-EM3"/>
@@ -70,15 +70,18 @@
                             <constraint firstItem="DNr-f5-UGj" firstAttribute="top" secondItem="6vL-pH-I4i" secondAttribute="top" id="mpK-L6-vDF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="DNr-f5-UGj" id="Ukn-ff-awY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCL-DI-4uz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="755" y="794"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Controller-->
         <scene sceneID="Jky-UJ-xxk">
             <objects>
-                <viewController id="pE8-l4-gq3" sceneMemberID="viewController">
+                <viewController id="pE8-l4-gq3" customClass="AddController" customModule="WEEK8TODOFINAL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qLm-pz-VWw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,12 +116,18 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPressed:" destination="pE8-l4-gq3" eventType="touchUpInside" id="Tg6-CJ-0Tm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l5Y-dd-Jji"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="TWt-Hc-PFo"/>
+                    <connections>
+                        <outlet property="textView" destination="2ye-Vd-B0u" id="c9T-YV-pcq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qN6-ba-RyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

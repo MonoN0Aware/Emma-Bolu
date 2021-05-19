@@ -9,21 +9,14 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-<<<<<<< Updated upstream
 
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-=======
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        if let todo = fetchData() {
+        if let todo = fetchData(){
             todoList = todo
-        } else {
+        }else {
             todoList = [String]()
         }
->>>>>>> Stashed changes
         return true
     }
 

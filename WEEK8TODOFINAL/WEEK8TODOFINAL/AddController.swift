@@ -8,10 +8,14 @@
 import UIKit
 
 class AddController: UIViewController {
+
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
+
     @IBAction func addPressed(_ sender: UIButton) {
         if (textView.text != nil) && textView.text != "" {
             todoList?.append(textView.text!)
