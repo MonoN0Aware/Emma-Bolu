@@ -47,9 +47,10 @@ func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.Ed
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     guard let viewc =
-            storyboard?.instantiateViewController( withIdentifier: "task") as? TaskViewController else { return }
-    viewc.title = "New Task"
-    viewc.task = todoList?[indexPath.row ]
-    navigationController?.pushViewController(viewc, animated: true)
-}
+                    storyboard?.instantiateViewController( withIdentifier: "task") as? TaskViewController else { return }
+            viewc.title = "New Task"
+            viewc.task = todoList?[indexPath.row]
+            viewc.solveProblem = indexPath.row
+            navigationController?.pushViewController(viewc, animated: true)
+        }
 }

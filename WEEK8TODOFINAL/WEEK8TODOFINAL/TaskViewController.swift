@@ -8,19 +8,25 @@
 import UIKit
 
 class TaskViewController: UIViewController, UITextViewDelegate {
+
+    var solveProblem: Int!
     var task: String?
+    var todo = FirstViewController()
+
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
        textView.text = task
         textView.delegate = self
     }
-   
     func textViewDidBeginEditing(_ textView: UITextView) {
-        print("sdfgh")
+        todoList?.remove(at: solveProblem!)
+        print(solveProblem!)
     }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
-      print("78910")
-        textView.text = task
-    }
+           todoList?.insert(textView.text, at: solveProblem!)
+           saveData(todoList: todoList!)
+       }
+
 }
