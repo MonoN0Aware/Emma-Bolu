@@ -8,8 +8,9 @@
 import UIKit
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    // MARK: Setup TableView
     @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -42,7 +43,7 @@ func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.Ed
         tableView.reloadData()
     }
 }
-
+    // MARK: When row is selected, open taskview page
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
     guard let viewc =
