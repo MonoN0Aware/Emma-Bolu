@@ -23,7 +23,6 @@ class TaskViewController: UIViewController, UITextViewDelegate {
         todoList?.remove(at: solveProblem!)
         print(solveProblem!)
     }
-    
     func textViewDidEndEditing(_ textView: UITextView) {
            todoList?.insert(textView.text, at: solveProblem!)
            saveData(todoList: todoList!)

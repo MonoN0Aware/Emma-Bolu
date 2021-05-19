@@ -13,7 +13,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.delegate = self        
+        tableView.delegate = self
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
